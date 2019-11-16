@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
    Module 1 | Project - Trip Planner
    Chapters: Building Java Programs - A Back to Basics Approach 5e - Chapter 2 and 3 (Section: 3:3 Interactive Programs and Scanner Objects)
    Instructor: Kasey Champion
-   Date: November 14, 2019
+   Date: November 15, 2019
  */
 
 /*  In my online course “Learn to Program in Java,” for module one (1) project, I am instructed to write an user Trip
@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat;
     user input value responses information displayed interactions onto the console window from my Java coded
     print line statements’ questions through that are Java coded in mathematical computation conversions using the
     correct literal data types. In order to assists user to plan his or her international trip.  This online course “Learn to
-    Program in Java,” project for Module 1 is dated on November 14, 2019.
+    Program in Java,” project for Module 1 is dated on November 15, 2019.
  */
 
 public class Module1ProjectTripPlanner1 {
