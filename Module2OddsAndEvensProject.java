@@ -48,14 +48,49 @@ public class Module2OddsAndEvensProject {
         Evens game.
     */
         System.out.println("Welcome to the Odds or Evens game, " + fullName + ".");
+        System.out.println();
 
+        String userPlayer1Pick = asksUserInput.nextLine() ;
+            while (!userPlayer1Pick.startsWith("O") && !userPlayer1Pick.equals("Odd") && !userPlayer1Pick.startsWith("E") && !userPlayer1Pick.equals("Even")) {
 
-        System.out.print(fullName + ", Please enter your Odds or Evens choice by typing in O(dd) or (E)ven.");
-            String userChoice = asksUserInput.nextLine();
-            System.out.println(fullName + ", you have selected " + userChoice + ".");
+                System.out.print(fullName + ", Please entered either (0)dd or (E)ven letter or typed in the whole word 'Odd' or 'Even' name. ");
 
+                userPlayer1Pick = asksUserInput.nextLine();
+            }
+            String O = "Odd";
+            String Odd = "Odd";
+            String E = "Even";
+            String Even = "Even";
+
+            if (userPlayer1Pick.startsWith("O")) {
+                System.out.println(fullName + ", you have selected " + O + " as your choice.");
+            } else if (userPlayer1Pick.equals("Odd")) {
+                System.out.println(fullName + ", you have selected " + Odd + " as your choice.");
+            } else if (userPlayer1Pick.startsWith("E")) {
+                System.out.println(fullName + ", you have selected " + E + " as your choice.") ;
+            } else if  (userPlayer1Pick.equals("Even")) {
+                System.out.println(fullName + ", you have selected " + Even + " as your choice.");
+            } else {
+                System.out.println("An error has occurred in the written Java language program for Odds and Evens game");
+                System.out.println("please, contact the Odds and Evens game administration to report the error exception.");
+                System.out.println("Thank you.");
+            }
+
+            if (userPlayer1Pick.equals("O")) {
+                System.out.println("and, the Computer player 2 is " + Even + ".");
+            } else if (userPlayer1Pick.equals("Odd")) {
+                System.out.println("and, the Computer player 2 is " + Even + ".");
+            } else if (userPlayer1Pick.equals("E")) {
+                System.out.println("and, the Computer player 2 is " + Odd + ".");
+            } else if (userPlayer1Pick.equals("Even")) {
+                System.out.println("and, the Computer player 2 is " + Odd + ".");
+            } else {
+                System.out.println("An error has occurred in the written Java language program for Odds and Evens game");
+                System.out.println("please, contact the Odds and Evens game administration to report the error exception.");
+                System.out.println("Thank you.");
+            }
+        }
 
 
     }
 
-}
