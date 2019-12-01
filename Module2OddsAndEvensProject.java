@@ -30,67 +30,123 @@ import java.util.*;
 // Create a new Java file program call, Module2OddsAndEvensProject written in Java language.
 public class Module2OddsAndEvensProject {
     public static void main(String[] args) {
-    /*  Create a Scanner constructor to call when using "asksUserInput" special keyword, new in order to
+
+        //characterDashes();
+
+
+
+        /*  Create a Scanner constructor to call when using "asksUserInput" special keyword, new in order to
         stream into the object's parameter System.in.
-    */
+        */
         Scanner asksUserInput = new Scanner(System.in);
-    /*  Write a Java language print line statement asking user (player 1) to enter his or her full
-        name.
-    */
+        /*  Write a Java language print line statement asking user (player 1) to enter his or her full
+            name.
+        */
         System.out.print("What is your full name? ");
+
         /*  Write a Java language codes for Scanner input that stream user's (player 1) interactive String
             variable name (fullName) next to the corresponding print lint statement truncating user (player 1)
             middle and [or] last name.
         */
-            String fullName = asksUserInput.next();
+        String fullName = asksUserInput.next();
 
-    /*  Write a Java language print line statement codes for welcoming the user (player 1) to the Odds or
-        Evens game.
-    */
+
+        /*  Write a Java language print line statement codes for welcoming the user (player 1) to the Odds or
+            Evens game.
+        */
         System.out.println("Welcome to the Odds or Evens game, " + fullName + ".");
         System.out.println();
 
-        String userPlayer1Pick = asksUserInput.nextLine() ;
-            while (!userPlayer1Pick.startsWith("O") && !userPlayer1Pick.equals("Odd") && !userPlayer1Pick.startsWith("E") && !userPlayer1Pick.equals("Even")) {
+        String userPlayer1Pick = asksUserInput.nextLine();
+        while (!userPlayer1Pick.startsWith("O") && !userPlayer1Pick.equals("Odd") && !userPlayer1Pick.startsWith("E") && !userPlayer1Pick.equals("Even")) {
 
-                System.out.print(fullName + ", Please entered either (0)dd or (E)ven letter or typed in the whole word 'Odd' or 'Even' name. ");
+            System.out.print(fullName + ", Please enter either (0)dd or (E)ven letter or typed in the whole word 'Odd' or 'Even' name. ");
 
-                userPlayer1Pick = asksUserInput.nextLine();
-            }
-            String O = "Odd";
-            String Odd = "Odd";
-            String E = "Even";
-            String Even = "Even";
+            userPlayer1Pick = asksUserInput.nextLine();
+        }
+        String O = "Odd";
+        String Odd = "Odd";
+        String E = "Even";
+        String Even = "Even";
 
-            if (userPlayer1Pick.startsWith("O")) {
-                System.out.println(fullName + ", you have selected " + O + " as your choice.");
-            } else if (userPlayer1Pick.equals("Odd")) {
-                System.out.println(fullName + ", you have selected " + Odd + " as your choice.");
-            } else if (userPlayer1Pick.startsWith("E")) {
-                System.out.println(fullName + ", you have selected " + E + " as your choice.") ;
-            } else if  (userPlayer1Pick.equals("Even")) {
-                System.out.println(fullName + ", you have selected " + Even + " as your choice.");
-            } else {
-                System.out.println("An error has occurred in the written Java language program for Odds and Evens game");
-                System.out.println("please, contact the Odds and Evens game administration to report the error exception.");
-                System.out.println("Thank you.");
-            }
-
-            if (userPlayer1Pick.equals("O")) {
-                System.out.println("and, the Computer player 2 is " + Even + ".");
-            } else if (userPlayer1Pick.equals("Odd")) {
-                System.out.println("and, the Computer player 2 is " + Even + ".");
-            } else if (userPlayer1Pick.equals("E")) {
-                System.out.println("and, the Computer player 2 is " + Odd + ".");
-            } else if (userPlayer1Pick.equals("Even")) {
-                System.out.println("and, the Computer player 2 is " + Odd + ".");
-            } else {
-                System.out.println("An error has occurred in the written Java language program for Odds and Evens game");
-                System.out.println("please, contact the Odds and Evens game administration to report the error exception.");
-                System.out.println("Thank you.");
-            }
+        if (userPlayer1Pick.startsWith("O")) {
+            System.out.println(fullName + ", you have selected " + O + " as your choice.");
+        } else if (userPlayer1Pick.equals("Odd")) {
+            System.out.println(fullName + ", you have selected " + Odd + " as your choice.");
+        } else if (userPlayer1Pick.startsWith("E")) {
+            System.out.println(fullName + ", you have selected " + E + " as your choice.");
+        } else if (userPlayer1Pick.equals("Even")) {
+            System.out.println(fullName + ", you have selected " + Even + " as your choice.");
+        } else {
+            System.out.println("An error has occurred in the written Java language program for Odds and Evens game");
+            System.out.println("please, contact the Odds and Evens game administration to report the error exception.");
+            System.out.println("Thank you.");
         }
 
+        if (userPlayer1Pick.equals("O")) {
+            System.out.println("and, the Computer player 2 is " + Even + ".");
+        } else if (userPlayer1Pick.equals("Odd")) {
+            System.out.println("and, the Computer player 2 is " + Even + ".");
+        } else if (userPlayer1Pick.equals("E")) {
+            System.out.println("and, the Computer player 2 is " + Odd + ".");
+        } else if (userPlayer1Pick.equals("Even")) {
+            System.out.println("and, the Computer player 2 is " + Odd + ".");
+        } else {
+            System.out.println("An error has occurred in the written Java language program for Odds and Evens game");
+            System.out.println("please, contact the Odds and Evens game administration to report the error exception.");
+            System.out.println("Thank you.");
+        }
+        //characterDashes();
 
+
+
+
+        /*  Create a Scanner constructor to call when using "howManyFingersInput" special keyword, new in order to
+            stream into the object's parameter System.in.
+        */
+        Scanner numberInput = new Scanner(System.in);
+
+            /*  Write a Java language print line statement asking user (player 1) how many finger(s) in number, value
+                he or she will enter.
+            */
+        System.out.print("Enter any number from 0 to 100: ");
+        int userNumber = numberInput.nextInt();
+        Random computerRandom = new Random();
+        int computerPlayer = computerRandom.nextInt(100) + 1;
+        System.out.println(fullName + ", you have chosen " + userNumber + ", as your number value selection.");
+        System.out.println("And, the computer player 2 has selected " + computerPlayer + ", as it number value selection.");
+
+        //characterDashes();
+
+        int bothNumbers = userNumber + computerPlayer;
+
+        System.out.println(fullName + ", selected number, " + userNumber + " and the Computer player 2 selected number, " + computerPlayer + " and, both players' numbers calculates to " + bothNumbers + ".");
+        if (bothNumbers % 2 == 0) {
+            System.out.println("The number " + bothNumbers + " results is even.");
+            if (userPlayer1Pick.equals("E") || userPlayer1Pick.equals("Even")) {
+                System.out.println(fullName + ", YOU HAVE WON the ODDS AND EVENS GAME!");
+            } else {
+                System.out.println("The number " + bothNumbers + " results is odd.");
+                System.out.println("The computer Player 2 HAVE WON THE ODDS AND EVENS GAME!");
+            }
+
+            } if (bothNumbers % 2 != 0) {
+                System.out.println("The number " + bothNumbers + " results is odd.");
+                if (userPlayer1Pick.equals("O") || userPlayer1Pick.equals("Odd")) {
+                    System.out.println(fullName + ", YOU HAVE WON the ODDS AND EVENS GAME!");
+                } else {
+                    System.out.println("The number " + bothNumbers + " results is even.");
+                    System.out.println("The computer Player 2 HAVE WON THE ODDS AND EVENS GAME!");
+            }
+
+
+        }
     }
+}
+
+
+
+
+
+
 
